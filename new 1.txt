@@ -1,0 +1,44 @@
+Java Program to print all happy numbers between 1 and 100.
+
+How to check if a number is a happy number
+
+A happy number is a number that reaches 1 after a sequence of steps. In each step, the number is replaced by the sum of its squared digits.
+
+Formula:
+
+32 + 22 = 13 12 + 32 = 10 12 + 02 = 1
+
+Some of the other examples of happy numbers are 7, 28, 100, 320 and so on.
+
+Unhappy number will result into a cycle of 4, 16, 37, 58, 89, 145, 42, 20, 4, ...
+
+To find whether a given number is happy or not, calculate the square of each digit present in number and add it to a variable sum. If resulting sum is equal to 1 then, given number is a happy number. If the sum is equal to 4 then, the number is an unhappy number. Else, replace the number with the sum of the square of digits.
+
+Algorithm:
+
+1.isHappyNumber() determines whether a given number is happy or not.
+
+If the number is greater than 0, calculate remainder rem by dividing the number with 10.
+Calculate square of rem and add it to a variable sum.
+Divide number by 10.
+Repeat the steps from a to c till the sum of the square of all digits present in number has been calculated.
+Finally, return the sum.
+2.To display all happy numbers between 1 and 100,
+
+Start a loop from 1 to 100, then make a call to isHappyNumber() method for each value from 1 to 100 and store the return value into a variable result.
+If the result is neither equal to 1 nor 4 then, make a call to isHappyNumber().
+Otherwise, if the result is equal to 1, it implies that the number is happy and display it.
+Sample Input 0
+
+10
+Sample Output 0
+
+List of happy numbers between 1 and 10: 
+1 7 10
+Sample Input 1
+
+100
+Sample Output 1
+
+List of happy numbers between 1 and 100: 
+1 7 10 13 19 23 28 31 32 44 49 68 70 79 82 86 91 94 97 100
